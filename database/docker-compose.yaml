@@ -1,12 +1,13 @@
-services: 
+version: '3.8'
+services:
   postgres:
-    image: postgres:latest
+    image: postgres:13
     container_name: falling-reflection-db
-    environment: 
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+    environment:
+      POSTGRES_USER: gameuser
+      POSTGRES_PASSWORD: gamepassword
       POSTGRES_DB: gamedb
     ports:
       - "5432:5432"
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql 
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

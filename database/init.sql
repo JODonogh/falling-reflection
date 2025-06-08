@@ -6,7 +6,7 @@ CREATE TABLE players (
 
 CREATE TABLE scores (
     id SERIAL PRIMARY KEY, 
-    player_id INTEGER REFERENCES players(id), 
+    player_id INTEGER REFERENCES players(id),
     score INTEGER NOT NULL,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-); 
+);
