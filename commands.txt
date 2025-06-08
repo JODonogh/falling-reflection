@@ -1,0 +1,8 @@
+#list connections
+netstat -ano | findstr 5432
+
+#examine a process by its PID
+tasklist /FI "PID eq 7212"
+
+#connect directly to the database
+psql -h localhost -U gameuser -d gamedb
